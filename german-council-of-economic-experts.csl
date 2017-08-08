@@ -16,7 +16,7 @@
     <category citation-format="author-date"/>
     <category field="political_science"/>
     <summary>Style for the German Council of Economic Experts</summary>
-    <updated>2017-03-09T15:05:44+00:00</updated>
+    <updated>2017-08-08T12:45:35+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="de">
@@ -31,7 +31,7 @@
       <term name="long-ordinal-02">zweite</term>
       <term name="long-ordinal-03">dritte</term>
       <term name="long-ordinal-04">vierte</term>
-      <term name="long-ordinal-05">fünfte</term>
+      <term name="long-ordinal-05">f nfte</term>
       <term name="long-ordinal-06">sechste</term>
       <term name="long-ordinal-07">siebte</term>
       <term name="long-ordinal-08">achte</term>
@@ -149,6 +149,21 @@
       </else-if>
     </choose>
   </macro>
+  <macro name="access">
+    <choose>
+      <if type="webpage">
+        <text variable="URL"/>
+        <group delimiter=" " prefix=", ">
+          <text term="retrieved"/>
+          <date variable="accessed">
+            <date-part name="day" form="numeric" suffix="."/>
+            <date-part name="month" form="numeric" suffix="."/>
+            <date-part name="year"/>
+          </date>
+        </group>
+      </if>
+    </choose>
+  </macro>
   <macro name="publisher">
     <choose>
       <if variable="publisher-place">
@@ -159,21 +174,6 @@
       </else>
     </choose>
     <text variable="publisher-place"/>
-  </macro>
-  <macro name="access">
-    <choose>
-      <if type="webpage">
-        <text variable="URL"/>
-        <group delimiter=" " prefix=", ">
-          <text term="accessed" text-case="capitalize-first"/>
-          <date variable="accessed">
-            <date-part name="day" form="numeric" suffix="."/>
-            <date-part name="month" form="numeric" suffix="."/>
-            <date-part name="year"/>
-          </date>
-        </group>
-      </if>
-    </choose>
   </macro>
   <macro name="date">
     <date variable="issued" prefix="">
