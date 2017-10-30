@@ -20,7 +20,7 @@
   </info>
   <locale xml:lang="de">
     <terms>
-      <term name="accessed">Stand</term>
+      <term name="retrieved">abgerufen am</term>
       <term name="et-al">et al.</term>
       <term name="ordinal-01">.</term>
       <term name="ordinal-02">.</term>
